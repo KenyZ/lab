@@ -1,0 +1,17 @@
+{
+    "name": "kenyzachelin/lab",
+    "authors": [
+        {
+            "name": "KenyZ"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.4",
+        "twig/twig": "^2.0",
+        "doctrine/orm": "^2.7",
+        "symfony/yaml": "^4.4"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    }
+}

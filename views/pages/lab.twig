@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ getAssets("lab.css") }}">
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ getAssets("lab.bundle.js") }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="page page-lab">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Keny Zachelin - Lab</a>
+            <button 
+                class="navbar-toggler"
+                id="listOpener" 
+                type="button" 
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+       <div class="page-lab__body">
+       
+
+            <div id="labList" class="page-lab__list-container">
+            
+                <div class="p-2">
+                    <input type="search" class="form-control" placeholder="Search project" id="searchProjectInput">
+                </div>
+
+                <ul class="page-lab__list-container-list">
+
+                    {% for i in 1..42 %}
+                        
+                        <li class="page-lab__list-container-list-item">Item {{ i }}</li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+
+            <div class="page-lab__view"></div>
+
+        </div>
+
+    </div>
+{% endblock %}

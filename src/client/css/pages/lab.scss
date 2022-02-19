@@ -1,0 +1,44 @@
+@import "../base.scss";
+@import "../mixins.scss";
+
+.page-lab{
+    
+    display: flex;
+    flex-direction: column;
+
+    &__body{
+        position: relative;
+        height: 100%;
+    }
+
+    &__list-container{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        max-width: 350px;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transform: translate(0, 0);
+        transition: transform ease 150ms;
+
+        &.closed{
+            transform: translate(100%, 0);
+        }
+
+        &-list{
+            overflow-y: auto;
+            height: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__view{
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+    }
+
+}

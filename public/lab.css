@@ -1,0 +1,33 @@
+html, body, #root, .page {
+  height: 100%; }
+
+/** RESPONSE **/
+.page-lab {
+  display: flex;
+  flex-direction: column; }
+  .page-lab__body {
+    position: relative;
+    height: 100%; }
+  .page-lab__list-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    max-width: 350px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0, 0);
+    transition: transform ease 150ms; }
+    .page-lab__list-container.closed {
+      transform: translate(100%, 0); }
+    .page-lab__list-container-list {
+      overflow-y: auto;
+      height: 100%;
+      margin-bottom: 0; }
+  .page-lab__view {
+    background-color: #000;
+    width: 100%;
+    height: 100%; }
+
